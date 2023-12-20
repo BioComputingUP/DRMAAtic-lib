@@ -28,19 +28,19 @@ class Session(dr.Session):
         logger.debug("DRMAA_LIBRARY_PATH: {}".format(env.str("DRMAA_LIBRARY_PATH", None)))
         logger.debug("SLURM_DRMAA_USE_SLURMDBD: {}".format(env.int("SLURM_DRMAA_USE_SLURMDBD", None)))
 
-        logger.info("Session created")
+        logger.debug("Session created")
 
     def start(self):
         if not self.is_running:
             super().initialize()
             self.is_running = True
-            logger.info("Session started")
+            logger.debug("Session started")
 
     def stop(self):
         if self.is_running:
             super().exit()
             self.is_running = False
-            logger.info("Session closed")
+            logger.debug("Session closed")
         else:
             logger.warning("Session was not open")
 

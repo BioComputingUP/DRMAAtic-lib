@@ -11,9 +11,7 @@ session = Session()
 session.start()
 
 
-def start_job(working_dir, script_args, script_dir="/home/alessio/projects/submission_ws/scripts",
-              out_dir="/home/alessio/projects/submission_ws/outputs", is_array=False, begin_index=1, end_index=1,
-              step_index=1, **kwargs):
+def start_job(working_dir, script_args, script_dir, out_dir, is_array=False, begin_index=1, end_index=1, step_index=1, **kwargs):
     job: Job = Job(working_dir=working_dir, script_dir=script_dir, output_base_pth=out_dir, args=script_args, **kwargs)
 
     name = job.get_name()
