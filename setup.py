@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
         name='DRMAAtic-lib',
-        version='1.0.6',
+        version='1.0.7',
         author='Alessio Del Conte',
         author_email='alessio.delconte@phd.unipd.it',
         description='DRMAA interface for Slurm/SGE DRMs @ BioComputingUP lab',
