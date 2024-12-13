@@ -110,7 +110,7 @@ class AbstractJob(ABC):
         self._job.errorPath = ':' + pth
 
     def set_name(self, task_name: str):
-        self._job.jobName = task_name + "-{}".format(self.tok)
+        self._job.jobName = task_name + "~{}".format(self.tok)
 
     def set_command(self, path: str):
         """
